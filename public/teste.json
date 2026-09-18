@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "content": {
+    "id": "html-basico-01",
+    "title": "HTML básico",
+    "chapterNumber": "1",
+    "course": "Fundamentos de Front-end",
+    "discipline": "Desenvolvimento Web",
+    "theme": 2
+  },
+  "sections": [
+    {
+      "id": "introducao",
+      "type": "section",
+      "title": "Introdução",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "content": "Toda página da web começa com uma estrutura. O HTML é a linguagem responsável por organizar títulos, textos, imagens, links e outros elementos para que navegadores e pessoas consigam compreender o conteúdo."
+        },
+        {
+          "type": "subtitle",
+          "content": "O que é HTML?"
+        },
+        {
+          "type": "paragraph",
+          "content": "HTML significa HyperText Markup Language, ou Linguagem de Marcação de Hipertexto. Ele não é uma linguagem de programação: sua função é descrever a estrutura e o significado das informações apresentadas em uma página."
+        },
+        {
+          "type": "list",
+          "children": [
+            {
+              "title": "Estrutura",
+              "content": "organiza o conteúdo em elementos como cabeçalhos, parágrafos e seções."
+            },
+            {
+              "title": "Semântica",
+              "content": "explica o papel de cada parte da página para navegadores e tecnologias assistivas."
+            },
+            {
+              "title": "Hipertexto",
+              "content": "conecta páginas e recursos por meio de links."
+            },
+            {
+              "content": "CSS cuida da apresentação e JavaScript acrescenta comportamento.",
+              "subitem": true
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Uma linguagem feita de elementos"
+        },
+        {
+          "type": "paragraph",
+          "content": "Um elemento HTML normalmente possui uma tag de abertura, um conteúdo e uma tag de fechamento. Alguns elementos, como imagens, não envolvem texto, mas ainda usam atributos para fornecer informações adicionais."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/seed/html-basico/1200/720",
+          "alt": "Imagem ilustrativa aleatória para o capítulo de HTML básico"
+        }
+      ]
+    },
+    {
+      "id": "desenvolvimento",
+      "type": "section",
+      "title": "Desenvolvimento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "content": "Agora que o papel do HTML está claro, podemos montar um documento completo e conhecer os elementos usados com mais frequência no início de um projeto."
+        },
+        {
+          "type": "subtitle",
+          "content": "Anatomia de um documento HTML"
+        },
+        {
+          "type": "paragraph",
+          "content": "A estrutura mínima informa ao navegador qual versão do HTML está sendo utilizada, define o idioma principal da página e separa configurações do conteúdo visível."
+        },
+        {
+          "type": "code-box",
+          "title": "Estrutura mínima",
+          "snippets": [
+            {
+              "language": "html",
+              "description": "Documento completo",
+              "code": "<!doctype html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Minha primeira página</title>\n  </head>\n  <body>\n    <h1>Olá, mundo!</h1>\n    <p>Minha primeira página em HTML.</p>\n  </body>\n</html>"
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "As partes fundamentais"
+        },
+        {
+          "type": "ordered-list",
+          "start": 1,
+          "list-type": "1",
+          "children": [
+            {
+              "title": "<!doctype html>",
+              "content": "indica que o documento utiliza o padrão moderno do HTML."
+            },
+            {
+              "title": "<html>",
+              "content": "envolve todo o documento e informa seu idioma."
+            },
+            {
+              "title": "<head>",
+              "content": "reúne metadados, título, fontes e referências a arquivos externos."
+            },
+            {
+              "title": "<body>",
+              "content": "contém tudo o que será apresentado visualmente na página."
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Texto, links e conteúdo semântico"
+        },
+        {
+          "type": "paragraph",
+          "content": "Títulos devem seguir uma hierarquia lógica, começando por h1 e avançando sem saltos desnecessários. Parágrafos usam a tag p, enquanto links usam a tag a e recebem o destino no atributo href."
+        },
+        {
+          "type": "code-box",
+          "title": "Conteúdo de uma página",
+          "snippets": [
+            {
+              "language": "html",
+              "description": "Texto e link",
+              "code": "<main>\n  <h1>Guia de HTML</h1>\n  <p>Aprenda a estruturar sua primeira página.</p>\n  <a href=\"https://developer.mozilla.org/pt-BR/docs/Web/HTML\">Consultar documentação</a>\n</main>"
+            },
+            {
+              "language": "html",
+              "description": "Seções semânticas",
+              "code": "<header>Topo da página</header>\n<main>Conteúdo principal</main>\n<footer>Rodapé da página</footer>"
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Entendendo head, body e semântica"
+        },
+        {
+          "type": "slider",
+          "slides": [
+            {
+              "type": "paragraph",
+              "content": "O elemento <head> guarda informações sobre o documento. Seu conteúdo normalmente não aparece na área visível da página."
+            },
+            {
+              "type": "paragraph",
+              "content": "O elemento <body> concentra títulos, textos, imagens, formulários e todos os demais elementos apresentados ao usuário."
+            },
+            {
+              "type": "paragraph",
+              "content": "Elementos como header, main, article, section e footer comunicam a função de cada região e tornam o documento mais semântico."
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Continue praticando"
+        },
+        {
+          "type": "video",
+          "videoSrc": "https://vimeo.com/76979871"
+        }
+      ]
+    },
+    {
+      "id": "conclusao",
+      "type": "section",
+      "title": "Conclusão",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "content": "HTML é a base sobre a qual estilos e interações são construídos. Uma estrutura simples, válida e semântica facilita a manutenção do projeto e melhora a experiência de pessoas, mecanismos de busca e tecnologias assistivas."
+        },
+        {
+          "type": "subtitle",
+          "content": "Boas práticas para levar adiante"
+        },
+        {
+          "type": "list",
+          "children": [
+            {
+              "title": "Organize",
+              "content": "mantenha a indentação consistente e agrupe conteúdos relacionados."
+            },
+            {
+              "title": "Seja semântico",
+              "content": "escolha elementos pelo significado, não apenas pela aparência."
+            },
+            {
+              "title": "Inclua alternativas",
+              "content": "descreva imagens com alt e associe rótulos aos campos de formulário."
+            },
+            {
+              "title": "Valide",
+              "content": "revise a hierarquia de títulos, os links e a estrutura antes de publicar."
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Resumo do capítulo"
+        },
+        {
+          "type": "slider",
+          "slides": [
+            {
+              "type": "paragraph",
+              "content": "Primeiro, crie a estrutura básica do documento com doctype, html, head e body."
+            },
+            {
+              "type": "paragraph",
+              "content": "Depois, organize o conteúdo usando títulos, parágrafos, listas, links e regiões semânticas."
+            },
+            {
+              "type": "paragraph",
+              "content": "Por fim, valide a página e só então avance para CSS e JavaScript."
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Próximo passo"
+        },
+        {
+          "type": "paragraph",
+          "content": "Crie um arquivo index.html, reproduza a estrutura apresentada neste capítulo e personalize o conteúdo. Quando a marcação estiver clara, experimente adicionar estilos com CSS."
+        }
+      ]
+    }
+  ]
+}
