@@ -1,0 +1,10 @@
+.root {
+  width: min(100%, 720px);
+  margin: 4px 0 -10px;
+  justify-self: start;
+  color: #202b42;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-align: left;
+}

@@ -1,0 +1,31 @@
+.root {
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  text-align: center;
+  place-content: center;
+
+  p {
+    color: #727b8c;
+  }
+
+  code {
+    font-family: 'DM Mono', monospace;
+  }
+}
+
+.loader {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 14px;
+  border: 3px solid #d9dee7;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,27 @@
+.root {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 160ms ease;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.primary {
+  color: #fff;
+  background: var(--accent, #3b82f6);
+}
+
+.ghost {
+  color: #303a50;
+  border: 1px solid #d7dce5;
+  background: #fff;
+}

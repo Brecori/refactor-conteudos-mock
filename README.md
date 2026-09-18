@@ -110,26 +110,39 @@ Existe uma latência artificial curta para tornar perceptível o estado de carre
 ```text
 src/
 ├── components/
+│   ├── app/
 │   ├── blocks/
-│   │   └── block-renderer.tsx
-│   └── content-page.tsx
+│   │   ├── block-renderer/
+│   │   ├── code-box-block/
+│   │   ├── image-block/
+│   │   ├── list-block/
+│   │   ├── paragraph-block/
+│   │   ├── slider-block/
+│   │   ├── subtitle-block/
+│   │   └── video-block/
+│   ├── button/
+│   ├── chapter-hero/
+│   ├── content-page/
+│   ├── content-section/
+│   ├── error-state/
+│   ├── loading-state/
+│   └── page-footer/
 ├── services/
 │   └── content-service.ts
 ├── types/
-│   └── content.ts
-├── App.tsx
-├── main.tsx
-└── styles.css
+│   ├── content.ts
+│   └── styles.d.ts
+└── main.tsx
 ```
 
 Responsabilidades principais:
 
-- `App.tsx`: controla carregamento, sucesso, erro e nova tentativa;
+- `components/app`: controla carregamento, sucesso, erro e nova tentativa;
 - `content-service.ts`: simula a requisição e valida o documento recebido;
 - `content-page.tsx`: monta capa, seções e rodapé;
 - `block-renderer.tsx`: direciona cada tipo de bloco ao componente correspondente;
 - `content.ts`: define o contrato TypeScript;
-- `styles.css`: concentra a identidade visual exclusiva do protótipo.
+- cada componente possui `index.tsx`, `props.ts` e `styles.module.scss`, mantendo tipagem e estilos Sass isolados.
 
 ## Executando localmente
 

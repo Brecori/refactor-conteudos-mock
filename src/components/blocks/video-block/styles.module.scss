@@ -1,0 +1,38 @@
+.root {
+  width: min(100%, 800px);
+  margin: 0;
+  overflow: hidden;
+  justify-self: center;
+  border: 1px solid #dfe3e9;
+  border-radius: 20px;
+  background: #f8f9fb;
+}
+
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  color: #7d8595;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.label {
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #101728;
+}

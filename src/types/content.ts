@@ -20,12 +20,12 @@ export interface ContentSection {
   blocks: ContentBlock[];
 }
 
-interface ParagraphBlock {
+export interface ParagraphBlock {
   type: 'paragraph';
   content: string;
 }
 
-interface SubtitleBlock {
+export interface SubtitleBlock {
   type: 'subtitle';
   content: string;
 }
@@ -36,42 +36,42 @@ export interface ListItemData {
   subitem?: boolean;
 }
 
-interface ListBlock {
+export interface ListBlock {
   type: 'list';
   children: ListItemData[];
 }
 
-interface OrderedListBlock {
+export interface OrderedListBlock {
   type: 'ordered-list';
   start?: number;
   'list-type'?: '1' | 'a' | 'A' | 'i' | 'I';
   children: ListItemData[];
 }
 
-interface CodeSnippet {
+export interface CodeSnippet {
   language: string;
   description: string;
   code: string;
 }
 
-interface CodeBoxBlock {
+export interface CodeBoxBlock {
   type: 'code-box';
   title?: string;
   snippets: CodeSnippet[];
 }
 
-interface ImageBlock {
+export interface ImageBlock {
   type: 'image';
   url: string;
   alt: string;
 }
 
-interface VideoBlock {
+export interface VideoBlock {
   type: 'video';
   videoSrc: string;
 }
 
-interface SliderBlock {
+export interface SliderBlock {
   type: 'slider';
   slides: ContentBlock[];
 }
@@ -85,4 +85,3 @@ export type ContentBlock =
   | ImageBlock
   | VideoBlock
   | SliderBlock;
-

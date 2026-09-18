@@ -1,0 +1,79 @@
+.root {
+  width: min(100%, 800px);
+  margin: 0;
+  overflow: hidden;
+  justify-self: center;
+  border: 1px solid #dfe3e9;
+  border-radius: 20px;
+  background: #f8f9fb;
+}
+
+.header,
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header {
+  padding: 20px 22px;
+}
+
+.label {
+  color: #828b9b;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 22px 12px;
+}
+
+.tab {
+  padding: 7px 12px;
+  color: #6c7586;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.activeTab {
+  color: #fff;
+  background: #202a3f;
+}
+
+.meta {
+  padding: 10px 22px;
+  color: #b9c3d5;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  background: #182033;
+}
+
+.code {
+  overflow-x: auto;
+  margin: 0;
+  padding: 26px 22px;
+  color: #f0f3f9;
+  font-family: 'DM Mono', monospace;
+  line-height: 1.7;
+  background: #101728;
+}
+
+@media (max-width: 560px) {
+  .header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

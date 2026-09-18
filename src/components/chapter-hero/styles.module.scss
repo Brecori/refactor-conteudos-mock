@@ -1,0 +1,151 @@
+.root {
+  position: relative;
+  display: flex;
+  min-height: 80vh;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0 var(--page-gutter);
+  color: #fff;
+  background:
+    radial-gradient(circle at 76% 24%, color-mix(in srgb, var(--accent) 70%, transparent), transparent 28%),
+    linear-gradient(135deg, #101728 0%, #17223c 62%, #101728 100%);
+
+  &::after {
+    position: absolute;
+    right: -80px;
+    bottom: -240px;
+    width: 480px;
+    height: 480px;
+    border: 1px solid rgb(255 255 255 / 14%);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 70px rgb(255 255 255 / 3%),
+      0 0 0 140px rgb(255 255 255 / 2%);
+    content: '';
+  }
+}
+
+.topbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.brand,
+.status,
+.eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.brand {
+  font-weight: 500;
+}
+
+.status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #bdc7da;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #65e5a2;
+  box-shadow: 0 0 12px #65e5a2;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 48px;
+  align-items: center;
+  padding: 56px 0 72px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #b9c5da;
+
+  span {
+    margin: 0 6px;
+    color: var(--accent);
+  }
+}
+
+.title {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.description {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: #c9d1df;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.badge {
+  display: grid;
+  width: 172px;
+  min-height: 172px;
+  padding: 24px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 28px;
+  background: rgb(255 255 255 / 7%);
+  backdrop-filter: blur(12px);
+
+  span {
+    color: #bdc7da;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+  }
+
+  strong {
+    align-self: end;
+    font-size: 5rem;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 860px) {
+  .content {
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding-block: 40px 56px;
+  }
+
+  .badge {
+    width: 140px;
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 560px) {
+  .status {
+    font-size: 0.62rem;
+  }
+
+  .title {
+    font-size: 3.35rem;
+  }
+
+  .badge strong {
+    font-size: 4rem;
+  }
+}

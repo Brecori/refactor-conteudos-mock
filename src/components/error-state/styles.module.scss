@@ -1,0 +1,27 @@
+.root {
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  text-align: center;
+  place-content: center;
+
+  p {
+    color: #727b8c;
+  }
+}
+
+.icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 1.5rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #d44b4b;
+}
+
+.button {
+  justify-self: center;
+}

@@ -1,0 +1,23 @@
+.root {
+  display: grid;
+  width: min(100%, 720px);
+  gap: 12px;
+  margin: 0;
+  padding-left: 28px;
+  justify-self: start;
+  color: #4f596c;
+  line-height: 1.65;
+  text-align: left;
+
+  li::marker {
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+  }
+}
+
+.nested {
+  margin-left: 24px;
+  color: #71798a;
+  list-style-type: circle;
+}
