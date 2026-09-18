@@ -3,7 +3,7 @@ import { Button } from '../../button';
 import type { CodeBoxBlockProps } from './props';
 import styles from './styles.module.scss';
 
-export const CodeBoxBlock = ({ block }: CodeBoxBlockProps) => {
+export const CodeBoxBlock = ({ block, number }: CodeBoxBlockProps) => {
   const [activeSnippet, setActiveSnippet] = useState(0);
   const [copied, setCopied] = useState(false);
   const snippet = block.snippets[activeSnippet];
@@ -25,7 +25,7 @@ export const CodeBoxBlock = ({ block }: CodeBoxBlockProps) => {
     <div className={styles.root}>
       <div className={styles.header}>
         <div>
-          <span className={styles.label}>Bloco de código</span>
+          <span className={styles.label}>Bloco de código {number}</span>
           <h3 className={styles.title}>{block.title || 'Exemplo de código'}</h3>
         </div>
         <Button variant="ghost" onClick={() => void copyCode()}>

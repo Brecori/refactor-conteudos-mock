@@ -8,7 +8,7 @@ import { VideoBlock } from '../video-block';
 import type { BlockRendererProps } from './props';
 import styles from './styles.module.scss';
 
-export const BlockRenderer = ({ block }: BlockRendererProps) => {
+export const BlockRenderer = ({ block, componentCounters }: BlockRendererProps) => {
   const renderBlock = () => {
     switch (block.type) {
       case 'paragraph':
@@ -19,13 +19,13 @@ export const BlockRenderer = ({ block }: BlockRendererProps) => {
       case 'ordered-list':
         return <ListBlock block={block} />;
       case 'code-box':
-        return <CodeBoxBlock block={block} />;
+        return <CodeBoxBlock block={block} number={componentCounters.get(block)?.codeBox ?? 1} />;
       case 'image':
-        return <ImageBlock block={block} />;
+        return <ImageBlock block={block} number={componentCounters.get(block)?.figure ?? 1} />;
       case 'video':
         return <VideoBlock block={block} />;
       case 'slider':
-        return <SliderBlock block={block} />;
+        return <SliderBlock block={block} componentCounters={componentCounters} />;
     }
   };
 

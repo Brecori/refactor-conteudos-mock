@@ -3,7 +3,7 @@ import { MediaPlaceholder } from '../media-placeholder';
 import type { ImageBlockProps } from './props';
 import styles from './styles.module.scss';
 
-export const ImageBlock = ({ block }: ImageBlockProps) => {
+export const ImageBlock = ({ block, number }: ImageBlockProps) => {
   const [hasError, setHasError] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ export const ImageBlock = ({ block }: ImageBlockProps) => {
       ) : (
         <img className={styles.image} src={block.url} alt={block.alt} onError={() => setHasError(true)} />
       )}
-      <figcaption className={styles.caption}>{block.alt}</figcaption>
+      <figcaption className={styles.caption}>Figura {number}: {block.alt}</figcaption>
     </figure>
   );
 };
